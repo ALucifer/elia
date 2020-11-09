@@ -1,0 +1,18 @@
+{
+  "products" : [
+    {
+      "id": 1, "libelle": "mon super title", "description": "description",
+      "image": { "src" :  "porsche.png" }, "price": 10.00
+    },
+    {
+      "id": 2, "libelle": "mon super title 2", "description": "description 2",
+      "image": { "src" :  "porsche.png" }, "price": 5.55
+    }
+  ],
+  "menu" : [
+    { "libelle":  "Technologie", "url":  "/technologie"},
+    { "libelle":  "Alimentaire", "url":  "/alimentaire"},
+    { "libelle":  "Automobile", "url":  "/automobile"},
+    { "libelle":  "Services", "url":  "/services"}
+  ]
+}
