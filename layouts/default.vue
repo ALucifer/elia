@@ -10,8 +10,8 @@
       <UserIconMenu class="mx-3" />
       <CartIconMenu class="mx-3" @toggleRDrawer="rightDrawer = !rightDrawer" />
       <template v-slot:extension>
-        <v-tabs v-for="(index, menu) in getMenus" :key="index">
-          <v-tab link :to="menu.url">{{ menu.libelle }}</v-tab>
+        <v-tabs v-for="(menu, index) in getMenus" :key="index">
+          <v-tab :key="index" link :to="menu.url">{{ menu.libelle }}</v-tab>
         </v-tabs>
       </template>
     </v-app-bar>
@@ -37,16 +37,10 @@ import { getModule } from 'vuex-module-decorators'
 import List from '~/components/cart/list'
 import CartIconMenu from '~/components/cart/CartIconMenu'
 import UserIconMenu from '~/components/user/UserIconMenu'
-import menuModule from '~/store/menuModule'
 
 export default {
   components: {
     List, CartIconMenu, UserIconMenu
-  },
-  fetch () {
-    const mymodule = getModule(menuModule, this.$store)
-    console.log(this.$store)
-    mymodule.fetchMenus
   },
   data () {
     return {

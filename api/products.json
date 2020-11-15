@@ -10,9 +10,9 @@
     }
   ],
   "menu" : [
-    { "libelle":  "Technologie", "url":  "/technologie"},
-    { "libelle":  "Alimentaire", "url":  "/alimentaire"},
-    { "libelle":  "Automobile", "url":  "/automobile"},
-    { "libelle":  "Services", "url":  "/services"}
+    { "libelle":  "Technologie", "url":  "/categories/technologie"},
+    { "libelle":  "Alimentaire", "url":  "/categories/alimentaire"},
+    { "libelle":  "Automobile", "url":  "/categories/automobile"},
+    { "libelle":  "Services", "url":  "/categories/services"}
   ]
 }

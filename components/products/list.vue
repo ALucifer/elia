@@ -7,14 +7,20 @@
 </template>
 
 <script lang="ts">
+import { mapGetters } from 'vuex'
 import { Component, Vue, Prop } from 'nuxt-property-decorator'
 import { Produits } from '~/types/produits'
-import card from '~/components/products/card'
+import { card } from '~/components/products/card'
 
 @Component({
-  components: { card }
+  components: { card },
+  computed: {
+    ...mapGetters('produitsModule', {
+      products: 'getProducts'
+    })
+  }
 })
 export default class ListProduct extends Vue {
-  @Prop() products!: Produits[]
+  @Prop() products?: Produits[]
 }
 </script>

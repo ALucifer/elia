@@ -30,6 +30,6 @@ import { Produits } from '@/types/produits'
   }
 })
 export default class card extends Vue {
-  @Prop() product: Produits
+  @Prop() product?: Produits
 }
 </script>

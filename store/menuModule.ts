@@ -16,15 +16,11 @@ export default class menuModule extends VuexModule {
 
   @Mutation
   setMenu (menus: Menu[]) {
-    console.log(menus)
     this.menus = menus
   }
 
   @Action({ commit: 'setMenu' })
-  public fetchMenus () {
-    console.log('ok')
-    $axios.$get('/menu').then((res) => {
-      return res
-    })
+  public async fetchMenus () {
+    return await $axios.$get('/menu')
   }
 }
